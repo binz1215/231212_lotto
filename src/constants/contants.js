@@ -1,4 +1,5 @@
 const CountNum = {
+  Zero: 0,
   ONE: 1,
   SIX: 6,
 };
