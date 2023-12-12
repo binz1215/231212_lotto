@@ -1,13 +1,13 @@
 import { Console } from '@woowacourse/mission-utils';
 
-class Output {
-  /**
-   *
-   * @param {Number} count
-   */
-  purchase(count) {
-    Console.print(`${count}개를 구매했습니다.`);
-  }
+/**
+ *
+ * @param {Number} count
+ */
+export function purchasePrint(count) {
+  Console.print(`${count}개를 구매했습니다.`);
 }
 
-export default Output;
+export function answerPrint(lotto, bonus) {
+  Console.print(`${'\n'}당첨 번호 공개 ${'\n'}[${lotto}] + [${bonus}]`);
+}

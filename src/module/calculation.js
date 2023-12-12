@@ -14,7 +14,7 @@ class Calculation {
   returnRatio(result, purchase) {
     const sum = this.sum(result);
 
-    const ratio = 100 - (sum / purchase) * 100;
+    const ratio = 100 - (sum / (purchase * 1000)) * 100;
 
     return ratio;
   }
