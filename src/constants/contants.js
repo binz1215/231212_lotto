@@ -9,7 +9,7 @@ const LottoArange = {
   BONUS: 20,
 };
 
-const MAXAMOUNT = 100000;
+const MAX_AMOUNT = 100000;
 
 const UNIT = 1000;
 
@@ -21,4 +21,4 @@ const PRIZE = {
   fifth: 5000,
 };
 
-export { CountNum, LottoArange, MAXAMOUNT, UNIT, PRIZE };
+export { CountNum, LottoArange, MAX_AMOUNT, UNIT, PRIZE };
