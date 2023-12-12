@@ -4,12 +4,15 @@ class LottoNum {
   #lottoNum = {};
 
   constructor() {
-    this.#randomLotto();
+    this.randomLotto();
     this.#bonusNum();
   }
 
-  #randomLotto() {
-    this.#lottoNum.lotto = MissionUtils.Random.pickUniqueNumbersInRange(1, 45, 5);
+  randomLotto() {
+    const random = MissionUtils.Random.pickUniqueNumbersInRange(1, 45, 5);
+    this.#lottoNum.lotto = random;
+
+    return random;
   }
 
   #bonusNum() {
