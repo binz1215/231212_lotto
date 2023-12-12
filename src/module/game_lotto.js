@@ -89,6 +89,6 @@ class Game {
 
 export default Game;
 
-const game = new Game();
-const x = await game.play();
-// const x = await game.find();
+// const game = new Game();
+// const x = await game.play();
+/// / const x = await game.find();
