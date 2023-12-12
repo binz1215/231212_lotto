@@ -4,13 +4,13 @@ class InputView {
   async purchaseAmount() {
     const purchase = await Console.readLineAsync('구입금액을 입력해 주세요.\n');
 
-    return purchase;
+    return Number(purchase);
   }
 
   async manualCount() {
     const manual = await Console.readLineAsync('수동 개수를 입력해 주세요.\n');
 
-    return manual;
+    return Number(manual);
   }
 
   async manualLotto() {
