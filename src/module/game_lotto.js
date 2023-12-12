@@ -3,21 +3,19 @@ import ValidMoneyCount from '../controller/valid_money_count.js';
 import LottoNum from './lottoNum.js';
 
 class Game {
-  #lottoNum;
+  #lottoNum; //
 
-  #bonusNum;
+  #bonusNum; //
 
   #inputLotto;
 
-  #randomLotto;
-
-  #money;
+  #money; //
 
   #count;
 
   #lotto;
 
-  #lottoArray = [];
+  #lottoArray = []; //
 
   constructor() {
     this.#inputLotto = new ValidLotto();
@@ -27,10 +25,15 @@ class Game {
   async play() {
     await this.find();
     await this.getLottoArray();
-    console.log(this.#lottoNum);
-    console.log(this.#bonusNum);
-    const a = this.#countOfWinning();
-    console.log(a);
+    const winning = this.#countOfWinning(); //
+
+    return {
+      money: this.#money,
+      lotto: this.#lottoNum,
+      bonus: this.#bonusNum,
+      numArray: this.#lottoArray,
+      winnigCount: winning,
+    };
   }
 
   async find() {
@@ -56,9 +59,6 @@ class Game {
     for (let i = 0; i < this.#money - this.#count; i++) {
       this.#lottoArray.push(this.#lotto.randomLotto());
     }
-
-    console.log(this.#lottoArray);
-    return this.#lottoArray;
   }
 
   #countOfWinning() {
