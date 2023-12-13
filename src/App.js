@@ -1,8 +1,7 @@
 import { Console } from '@woowacourse/mission-utils';
 import Calculation from './module/calculation.js';
 import Game from './module/game_lotto.js';
-import { PRIZE } from './constants/contants.js';
-import { purchasePrint, answerPrint } from './view/outputView.js';
+import { purchasePrint, answerPrint, statePrint } from './view/outputView.js';
 
 class App {
   #result = {};
@@ -32,7 +31,7 @@ class App {
     const calculation = new Calculation();
     const ratio = calculation.returnRatio(this.#result.winningCount, this.#result.money);
 
-    Console.print(ratio);
+    statePrint(this.#result.winningCount, ratio);
   }
 }
 
