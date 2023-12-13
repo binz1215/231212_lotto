@@ -1,6 +1,3 @@
-
-class App {
- 
-}
+class App {}
 
 export default App;
